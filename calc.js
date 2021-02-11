@@ -29,7 +29,17 @@ function operate(operator, x , y) {
         case '/':
             resultat = divide(x, y);
             break;
+        default :
+            return "Erreur de signe !";
     }
     return resultat;
 
 }
+
+//fonction pour ajouter la valeur du bouton a l'écran de texte de la calculatrice
+function numberScreen(id) {
+    var text = toString(document.getElementById(id).textContent);
+    document.getElementById('tap').textContent += text;
+}
+
+console.log(operate('*',6,3));
