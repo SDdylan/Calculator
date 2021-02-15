@@ -37,8 +37,8 @@ function operate(x, operator , y) {
 }
 
 
-console.log(add(12,8));
-alert(add(12, 8));
+//console.log(add(12,8));
+//alert(add(12, 8));
 
 //stockage de la value du calcul pour plus tard
 let calcul ;
@@ -58,8 +58,32 @@ function numberScreen(id) {
 function egalScreen() {
     calcul = document.getElementById('screen').value;
     let elements = calcul.split(" ");
-    alert(operate(parseFloat(elements[0]),elements[1],parseFloat(elements[2])))
     console.log(elements);
+    if (elements.length === 3) {
+        alert(operate(parseFloat(elements[0]),elements[1],parseFloat(elements[2])));
+    }
+    else if (elements.length > 3 && elements.length%2 !== 0) {
+        let i = 0;
+        let resultat = 0;
+        while (i<elements.length) {
+            if (i === 0) {
+                resultat += operate(parseFloat(elements[0]),elements[1],parseFloat(elements[2]));
+                console.log(elements[0],elements[1],elements[2]);
+                console.log(resultat);
+                i = 3;
+            } else {
+                resultat = operate(parseFloat(resultat),elements[i],parseFloat(elements[i+1]));
+                console.log(resultat,elements[i],elements[i+1]);
+                console.log(resultat);
+                i = i+2;
+            }
+        }
+        alert(resultat);
+    }
+    else {
+        alert("erreur d'opérateurs");
+    }
+    //modification pour prendre plusieurs éléments
 }
 
 
