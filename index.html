@@ -2,38 +2,34 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Calculatrice</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
-        <div id="textTap" style="text-align: center">
-            <label for="screen">Screen</label><input id="screen" value="">
-            <button class="clear" onclick="resetScreen();">C</button>
-        </div>
-        <div id="ligne1" style="text-align: center">
-            <button id="one" onclick="numberScreen('one');">1</button>
-            <button id="two" onclick="numberScreen('two')">2</button>
-            <button id="three" onclick="numberScreen('three')">3</button>
-            <button id="plus" onclick="numberScreen('plus')">+</button>
-        </div>
-        <div id="ligne2" style="text-align: center">
-            <button id="four" onclick="numberScreen('four')">4</button>
-            <button id="five" onclick="numberScreen('five')">5</button>
-            <button id="six" onclick="numberScreen('six')">6</button>
-            <button id="moins" onclick="numberScreen('moins')">-</button>
-        </div>
-        <div id="ligne3" style="text-align: center">
-            <button id="seven" onclick="numberScreen('seven')">7</button>
-            <button id="eight" onclick="numberScreen('eight')">8</button>
-            <button id="nine" onclick="numberScreen('nine')">9</button>
-            <button id="fois" onclick="numberScreen('fois')">*</button>
-        </div>
-        <div id="ligne4" style="text-align: center">
-            <button id="point" onclick="numberScreen('point')">,</button>
-            <button id="zero" onclick="numberScreen('one')">0</button>
-            <button id="divide" onclick="numberScreen('divide')">/</button>
-            <button id="egal" onclick="egalScreen()">=</button>
+    <div id="calc">
+        <div id="container">
+            <input id="screen" placeholder="0" value="">
+            <button id="clear" class="signe" onclick="resetScreen();">C</button>
+
+            <button id="divide" class="signe" onclick="numberScreen('divide')">/</button>
+            <button id="seven" class="chiffres" onclick="numberScreen('seven')">7</button>
+            <button id="eight"  class="chiffres" onclick="numberScreen('eight')">8</button>
+            <button id="nine" class="chiffres" onclick="numberScreen('nine')">9</button>
+
+            <button id="fois" class="signe" onclick="numberScreen('fois')">*</button>
+            <button id="four" class="chiffres" onclick="numberScreen('four')">4</button>
+            <button id="five" class="chiffres" onclick="numberScreen('five')">5</button>
+            <button id="six" class="chiffres" onclick="numberScreen('six')">6</button>
+
+            <button id="plus" class="signe" onclick="numberScreen('plus')">+</button>
+            <button id="one" class="chiffres" onclick="numberScreen('one');">1</button>
+            <button id="two" class="chiffres" onclick="numberScreen('two')">2</button>
+            <button id="three" class="chiffres" onclick="numberScreen('three')">3</button>
+
+            <button id="moins" class="signe" onclick="numberScreen('moins')">-</button>
+            <button id="zero" class="chiffres" onclick="numberScreen('zero')">0</button>
+            <button id="point" class="chiffres" onclick="numberScreen('point')">,</button>
+            <button id="egal" class="signe" onclick="egalScreen()">=</button>
         </div>
     </div>
 </body>
